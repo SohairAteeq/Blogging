@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog Website</title>
+  <style>
+    body,
+    h1,
+    h2,
+    p {
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+    }
+
+    .header {
+      background-color: #007bff;
+      color: white;
+      text-align: right;
+      padding: 10px 20px;
+    }
+
+    .login-button {
+      background-color: transparent;
+      border: none;
+      color: white;
+      cursor: pointer;
+    }
+
+    .greeting {
+      text-align: center;
+      padding: 20px;
+      font-size: 24px;
+    }
+
+    .blogs-list {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    .blog {
+      background-color: #f4f4f4;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      padding: 20px;
+      margin: 20px 0;
+    }
+
+    .blog h2 {
+      margin-bottom: 10px;
+    }
+
+    .blog p {
+      margin-bottom: 5px;
+    }
+
+    @media screen and (max-width: 768px) {
+      .blogs-list {
+        padding: 10px;
+      }
+
+      .blog {
+        padding: 15px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="header">
+    <button class="login-button"><a href="login.html">Login</a></button>
+  </div>
+  <div class="greeting">
+    <p id="greeting-message"></p>
+  </div>
+  <div class="blogs-list" id="blogs-list">
+  </div>
+  <script>
+    const blogsData = [
+      { title: 'Blog Title 1', author: 'Author 1', date: '2023-08-19', text: 'Lorem ipsum...' },
+      { title: 'Blog Title 2', author: 'Author 2', date: '2023-08-18', text: 'Dolor sit amet...' },
+    ];
+
+    function displayBlogs() {
+      const blogsList = document.getElementById('blogs-list');
+      blogsList.innerHTML = '';
+
+      blogsData.forEach(blog => {
+        const blogDiv = document.createElement('div');
+        blogDiv.className = 'blog';
+        blogDiv.innerHTML = `
+          <h2>${blog.title}</h2>
+          <p>Author: ${blog.author}</p>
+          <p>Date: ${blog.date}</p>
+          <p>${blog.text}</p>
+          <button onclick="viewAuthorBlogs('${blog.author}')">See All Blogs from This Author</button>
+        `;
+        blogsList.appendChild(blogDiv);
+      });
+    }
+
+    function greetUser() {
+      const currentTime = new Date();
+      const hours = currentTime.getHours();
+      let greeting;
+
+      if (hours >= 5 && hours < 12) {
+        greeting = 'Good morning';
+      } else if (hours >= 12 && hours < 18) {
+        greeting = 'Good afternoon';
+      } else if (hours >= 18 && hours < 22) {
+        greeting = 'Good evening';
+      } else {
+        greeting = 'Good night';
+      }
+
+      const greetingMessage = document.getElementById('greeting-message');
+      greetingMessage.textContent = `${greeting}, user!`;
+    }
+
+    function viewAuthorBlogs(author) {
+
+    }
+
+    displayBlogs();
+    greetUser();
+  </script>
+</body>
+
+</html>

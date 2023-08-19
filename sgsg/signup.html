@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+ 
+<head>
+  
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Signup Page</title>
+  <style>
+
+
+    
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .signup-container {
+      background-color: #fff;
+      border-radius: 8px;
+      padding: 20px;
+      box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+      width: 400px;
+      text-align: center;
+    }
+
+    .signup-container h2 {
+      margin-bottom: 20px;
+    }
+
+    .signup-form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .signup-input {
+      width: 100%;
+      padding: 10px;
+      margin: 8px 0;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    .signup-button {
+      background-color: #007bff;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      padding: 10px 20px;
+      cursor: pointer;
+    }
+
+    .signup-button:hover {
+      background-color: #0056b3;
+    }
+
+    .navbar {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      background-color: #007bff;
+      padding: 10px;
+      border-radius: 0 0 8px 8px;
+    }
+
+    .signup-text {
+      color: white;
+      font-size: 18px;
+      margin-right: 20px;
+    }
+
+    #loginb {
+      position: absolute;
+      top: 2rem;
+      left: 3rem;
+
+    }
+
+    #gfg {
+      text-decoration: none;
+      color: white;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="loginb" class="signup-button"><a id="gfg" href="login.html">Login</a></div>
+
+  <div class="signup-container">
+    <h2>Signup</h2>
+    <form class="signup-form" id="signup-form">
+      <input type="text" class="signup-input" placeholder="First Name (3-20 characters)" minlength="3" maxlength="20"
+        required>
+      <input type="text" class="signup-input" placeholder="Last Name (1-20 characters)" minlength="1" maxlength="20"
+        required>
+      <input type="email" class="signup-input" placeholder="Email" required>
+      <input type="password" class="signup-input"
+        placeholder="Password (8+ characters, including uppercase and lowercase)"
+        pattern= "^(?=.*[a-z])(?=.* [A-Z]).{8,}$" required>
+      <input type="password" class="signup-input" placeholder="Reenter Password" required>
+      <button type="submit" class="signup-button"><a id="gfg" href="dashboardAfterLogin.html">Sign Up</a></button>
+    </form>
+  </div>
+
+    <script>
+  // Import the functions you need from the SDKs you need
+  // import { initializeApp } from "https://www.gstatic.com/firebasejs/10.2.0/firebase-app.js";
+  // import { getDatabase } from "https://www.gstatic.com/firebasejs/10.2.0/firebase-database.js";
+  // import { getAuth } from "https://www.gstatic.com/firebasejs/10.2.0/firebase-auth.js";
+  // import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.2.0/firebase-analytics.js";
+  // TODO: Add SDKs for Firebase products that you want to use
+  // https://firebase.google.com/docs/web/setup#available-libraries
+
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  // const firebaseConfig = {
+  //   apiKey: "AIzaSyAEjLXV4EiULhdETN-ZLtY68nIy4AK-1xY",
+  //   authDomain: "blog-assignment-1cb74.firebaseapp.com",
+  //   databaseURL: "https://blog-assignment-1cb74-default-rtdb.firebaseio.com",
+  //   projectId: "blog-assignment-1cb74",
+  //   storageBucket: "blog-assignment-1cb74.appspot.com",
+  //   messagingSenderId: "488390995649",
+  //   appId: "1:488390995649:web:de069472887fb05e892e40",
+  //   measurementId: "G-XN0L6H8L07"
+  // };
+
+  // // Initialize Firebase
+  // const app = initializeApp(firebaseConfig);
+  // const database = getDatabase(app);
+  // const auth = getAut(app)
+
+  //   const signupForm = document.getElementById('signup-form');
+  //   //
+  //   //
+  //   // I tried but firebase is somehing that i havent learnt,
+  //   // i couldnt implement firebase since i dont know how to use it,
+  //   // kindly accept my assignment/hackthon :) :)
+
+
+  </script>
+</body>
+
+</html>
